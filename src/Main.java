@@ -3,9 +3,9 @@ public class Main {
         Cliente cliente1 = new Cliente("Matheus", "123.456.789-00", "01/01/1990", "Rua A, 123");
         Cliente cliente2 = new Cliente("Henrique", "987.654.321-00", "15/05/1985", "Rua B, 456");
 
-        Conta conta1 = new Conta("001", "12345-6", cliente1);
-        Conta conta2 = new Conta("002", "65432-1", cliente1);
-        Conta conta3 = new Conta("003", "98765-4", cliente2);
+        Conta conta1 = new Conta("001", "12345-6", cliente1, null);
+        Conta conta2 = new Conta("002", "65432-1", cliente1, null);
+        Conta conta3 = new Conta("003", "98765-4", cliente2, null);
 
         conta1.depositar(1000);
         conta2.depositar(500);

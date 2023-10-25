@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
-    private final String nome;
-    private final String cpf;
+    private String nome;
+    private String cpf;
     private List<String> contas;
     private List<String> transacoes;
 
