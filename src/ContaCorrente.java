@@ -2,14 +2,18 @@ public class ContaCorrente extends Conta {
     private double chequeEspecial;
     private int transferenciasRealizadas;
 
-    public ContaCorrente(String agencia, String numero, Cliente cliente, double chequeEspecial, int transferenciasRealizadas, Notificacao notificacoes) {
+    public ContaCorrente(String agencia, String numero, Cliente cliente, double chequeEspecial,
+            int transferenciasRealizadas, Notificacao notificacoes) {
         super(agencia, numero, cliente, notificacao);
         this.chequeEspecial = chequeEspecial;
         this.transferenciasRealizadas = 0;
     }
 
+    // faltou sobrescrever o saque para incluir o cheque especial ao saldo
+
     @Override
     public void transferir(Conta contaDestino, double valor) {
+        // faltou incluir o cheque especial ao saldo
         if (transferenciasRealizadas < 2) {
             super.transferir(contaDestino, valor);
             transferenciasRealizadas++;
@@ -36,7 +40,7 @@ public class ContaCorrente extends Conta {
     }
 
     public void notificacoes() {
-        
+
     }
 }
 

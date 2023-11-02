@@ -1,6 +1,7 @@
 public class ContaPoupanca extends Conta {
 
-    public ContaPoupanca(String numero, double saldo, Cliente cliente, String senha, Endereco endereco) {
+    public ContaPoupanca(String numero, double saldo, Cliente cliente, String senha,
+            Endereco endereco) {
         super(numero, "Poupança", saldo, cliente, senha, endereco);
     }
 
@@ -17,6 +18,7 @@ public class ContaPoupanca extends Conta {
 
     @Override
     public void depositar(double valor) {
+        // faltou adicionar o rendimento ao valor do deposito
         if (valor > 0) {
             saldo += valor;
             System.out.println("Valor depositado com sucesso.");
